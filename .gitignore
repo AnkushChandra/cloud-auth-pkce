@@ -1,0 +1,9 @@
+
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform/build/
+*.zip
+.DS_Store
+docs/functional-specification.tex
+docs/functional-specification.pdf

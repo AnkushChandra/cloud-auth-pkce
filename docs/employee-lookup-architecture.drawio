@@ -1,0 +1,216 @@
+<mxfile host="Electron" version="29.6.1">
+  <diagram name="Architecture" id="diagram-1">
+    <mxGraphModel dx="1400" dy="800" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="2400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+<mxCell id="title-group" connectable="0" style="group;fontFamily=Helvetica;" value="" vertex="1" parent="1">
+  <mxGeometry height="83" width="1680" x="40" y="20" as="geometry" />
+</mxCell>
+<mxCell id="title-text" style="text;html=1;resizable=1;points=[];autosize=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=30;fontStyle=1;fontFamily=Helvetica;" value="Employee Lookup Architecture" vertex="1" parent="title-group">
+  <mxGeometry height="42" width="900" as="geometry" />
+</mxCell>
+<mxCell id="subtitle-text" style="text;html=1;resizable=0;points=[];autosize=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=16;fontFamily=Helvetica;" value="Authenticated employee search through API Gateway, Lambda, Cognito, and DynamoDB" vertex="1" parent="title-group">
+  <mxGeometry height="25" width="1100" x="5" y="40" as="geometry" />
+</mxCell>
+<mxCell id="title-separator" style="line;strokeWidth=2;html=1;fontSize=14;strokeColor=#FF9900;fontFamily=Helvetica;" value="" vertex="1" parent="title-group">
+  <mxGeometry height="10" width="1670" x="5" y="70" as="geometry" />
+</mxCell>
+<mxCell id="aws-cloud" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[0,1],[0.25,1],[0.5,1],[0.75,1],[1,1],[0,0.25],[0,0.5],[0,0.75],[1,0.25],[1,0.5],[1,0.75]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=14;fontStyle=1;container=0;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud;strokeColor=#232F3E;fillColor=light-dark(#232F3E0D,#232F3E0D);verticalAlign=top;align=left;spacingLeft=40;fontColor=#232F3E;dashed=0;strokeWidth=2;fontFamily=Helvetica;fillStyle=auto;" value="AWS Cloud" vertex="1" parent="1">
+  <mxGeometry x="200" y="130" width="1560" height="620" as="geometry" />
+</mxCell>
+<mxCell id="users-container" style="fillColor=#f5f5f5;strokeColor=light-dark(#666666,#D4D4D4);rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fontColor=#333333;fontFamily=Helvetica;container=1;collapsible=0;shadow=1;strokeWidth=1;" value="Users" vertex="1" parent="1">
+  <mxGeometry x="40" y="340" height="98" width="107" as="geometry" />
+</mxCell>
+<mxCell id="users-icon" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#232F3D;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.users;fontFamily=Helvetica;" value="" vertex="1" parent="users-container">
+  <mxGeometry x="30" y="30" width="48" height="48" as="geometry" />
+</mxCell>
+<mxCell id="apigw-group" style="fillColor=#EDE7F6;strokeColor=#8C4FFF;rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fontColor=#8C4FFF;fontFamily=Helvetica;container=1;collapsible=0;shadow=1;strokeWidth=1.5;" value="Networking" vertex="1" parent="1">
+  <mxGeometry x="300" y="170" width="120" height="120" as="geometry" />
+</mxCell>
+<mxCell id="apigw" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#8C4FFF;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.api_gateway;fontFamily=Helvetica;shadow=1;" value="API Gateway&lt;div&gt;&lt;i&gt;REST API&lt;/i&gt;&lt;/div&gt;" vertex="1" parent="apigw-group">
+  <mxGeometry x="36" y="30" width="48" height="48" as="geometry" />
+</mxCell>
+<mxCell id="ui-group" style="fillColor=#FFF2E8;strokeColor=#ED7100;rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fontColor=#ED7100;fontFamily=Helvetica;container=1;collapsible=0;shadow=1;strokeWidth=1.5;" value="Compute" vertex="1" parent="1">
+  <mxGeometry x="620" y="170" width="120" height="120" as="geometry" />
+</mxCell>
+<mxCell id="ui" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#ED7100;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;fontFamily=Helvetica;shadow=1;" value="UI Lambda&lt;div&gt;&lt;i&gt;GET /&lt;/i&gt;&lt;/div&gt;" vertex="1" parent="ui-group">
+  <mxGeometry x="36" y="30" width="48" height="48" as="geometry" />
+</mxCell>
+<mxCell id="pool-group" style="fillColor=#FFEBEE;strokeColor=#DD344C;rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fontColor=#DD344C;fontFamily=Helvetica;container=1;collapsible=0;shadow=1;strokeWidth=1.5;" value="Security" vertex="1" parent="1">
+  <mxGeometry x="300" y="500" width="120" height="120" as="geometry" />
+</mxCell>
+<mxCell id="pool" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#DD344C;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cognito;fontFamily=Helvetica;shadow=1;" value="User Pool&lt;div&gt;&lt;i&gt;Managed Login&lt;/i&gt;&lt;/div&gt;" vertex="1" parent="pool-group">
+  <mxGeometry x="36" y="30" width="48" height="48" as="geometry" />
+</mxCell>
+<mxCell id="authorizer-group" style="fillColor=#FFEBEE;strokeColor=#DD344C;rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fontColor=#DD344C;fontFamily=Helvetica;container=1;collapsible=0;shadow=1;strokeWidth=1.5;" value="Security" vertex="1" parent="1">
+  <mxGeometry x="620" y="500" width="120" height="120" as="geometry" />
+</mxCell>
+<mxCell id="authorizer" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#DD344C;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cognito;fontFamily=Helvetica;shadow=1;" value="Authorizer&lt;div&gt;&lt;i&gt;ID token&lt;/i&gt;&lt;/div&gt;" vertex="1" parent="authorizer-group">
+  <mxGeometry x="36" y="30" width="48" height="48" as="geometry" />
+</mxCell>
+<mxCell id="backend-group" style="fillColor=#FFF2E8;strokeColor=#ED7100;rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fontColor=#ED7100;fontFamily=Helvetica;container=1;collapsible=0;shadow=1;strokeWidth=1.5;" value="Compute" vertex="1" parent="1">
+  <mxGeometry x="920" y="500" width="120" height="120" as="geometry" />
+</mxCell>
+<mxCell id="backend" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#ED7100;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;fontFamily=Helvetica;shadow=1;" value="Backend Lambda&lt;div&gt;&lt;i&gt;GET /employee/{id}&lt;/i&gt;&lt;/div&gt;" vertex="1" parent="backend-group">
+  <mxGeometry x="36" y="30" width="48" height="48" as="geometry" />
+</mxCell>
+<mxCell id="iam-group" style="fillColor=#FFEBEE;strokeColor=#DD344C;rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fontColor=#DD344C;fontFamily=Helvetica;container=1;collapsible=0;shadow=1;strokeWidth=1.5;" value="Security" vertex="1" parent="1">
+  <mxGeometry x="1220" y="500" width="120" height="120" as="geometry" />
+</mxCell>
+<mxCell id="iam" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#DD344C;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.identity_and_access_management;fontFamily=Helvetica;shadow=1;" value="IAM Role&lt;div&gt;&lt;i&gt;GetItem&lt;/i&gt;&lt;/div&gt;" vertex="1" parent="iam-group">
+  <mxGeometry x="36" y="30" width="48" height="48" as="geometry" />
+</mxCell>
+<mxCell id="table-group" style="fillColor=#F5E6F7;strokeColor=#C925D1;rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fontColor=#C925D1;fontFamily=Helvetica;container=1;collapsible=0;shadow=1;strokeWidth=1.5;" value="Database" vertex="1" parent="1">
+  <mxGeometry x="1520" y="500" width="120" height="120" as="geometry" />
+</mxCell>
+<mxCell id="table" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#C925D1;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.dynamodb;fontFamily=Helvetica;shadow=1;" value="DynamoDB&lt;div&gt;&lt;i&gt;Employees&lt;/i&gt;&lt;/div&gt;" vertex="1" parent="table-group">
+  <mxGeometry x="36" y="30" width="48" height="48" as="geometry" />
+</mxCell>
+<mxCell id="e-user-api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;strokeColor=#232F3E;exitX=1;exitY=0.15;entryX=0;entryY=0.5;" edge="1" parent="1" source="users-icon" target="apigw">
+  <mxGeometry relative="1" as="geometry" />
+</mxCell>
+<mxCell id="e-user-api-label" value="HTTPS" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;" connectable="0" vertex="1" parent="e-user-api">
+  <mxGeometry relative="1" x="-0.2" y="0" as="geometry"><mxPoint as="offset" /></mxGeometry>
+</mxCell>
+<mxCell id="e-api-ui" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;strokeColor=#232F3E;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" edge="1" parent="1" source="apigw" target="ui">
+  <mxGeometry relative="1" as="geometry" />
+</mxCell>
+<mxCell id="e-api-ui-label" value="GET /" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;" connectable="0" vertex="1" parent="e-api-ui">
+  <mxGeometry relative="1" x="-0.2" y="0" as="geometry"><mxPoint as="offset" /></mxGeometry>
+</mxCell>
+<mxCell id="e-api-auth" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;strokeColor=#232F3E;exitX=1;exitY=0.85;entryX=0;entryY=0.25;" edge="1" parent="1" source="apigw" target="authorizer">
+  <mxGeometry relative="1" as="geometry">
+    <Array as="points">
+      <mxPoint x="520" y="272" />
+      <mxPoint x="520" y="530" />
+    </Array>
+  </mxGeometry>
+</mxCell>
+<mxCell id="e-api-auth-label" value="GET /employee/{id}" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;" connectable="0" vertex="1" parent="e-api-auth">
+  <mxGeometry relative="1" x="-0.2" y="0" as="geometry"><mxPoint as="offset" /></mxGeometry>
+</mxCell>
+<mxCell id="e-auth-be" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;strokeColor=#232F3E;" edge="1" parent="1" source="authorizer" target="backend">
+  <mxGeometry relative="1" as="geometry" />
+</mxCell>
+<mxCell id="e-auth-be-label" value="allow" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;" connectable="0" vertex="1" parent="e-auth-be">
+  <mxGeometry relative="1" x="-0.2" y="0" as="geometry"><mxPoint as="offset" /></mxGeometry>
+</mxCell>
+<mxCell id="e-be-iam" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;strokeColor=#232F3E;" edge="1" parent="1" source="backend" target="iam">
+  <mxGeometry relative="1" as="geometry" />
+</mxCell>
+<mxCell id="e-be-iam-label" value="assume role" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;" connectable="0" vertex="1" parent="e-be-iam">
+  <mxGeometry relative="1" x="-0.2" y="0" as="geometry"><mxPoint as="offset" /></mxGeometry>
+</mxCell>
+<mxCell id="e-iam-db" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;strokeColor=#232F3E;" edge="1" parent="1" source="iam" target="table">
+  <mxGeometry relative="1" as="geometry" />
+</mxCell>
+<mxCell id="e-iam-db-label" value="GetItem" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;" connectable="0" vertex="1" parent="e-iam-db">
+  <mxGeometry relative="1" x="-0.2" y="0" as="geometry"><mxPoint as="offset" /></mxGeometry>
+</mxCell>
+<mxCell id="e-user-pool" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;dashed=1;strokeColor=#666666;exitX=1;exitY=0.85;entryX=0;entryY=0.5;" edge="1" parent="1" source="users-icon" target="pool">
+  <mxGeometry relative="1" as="geometry" />
+</mxCell>
+<mxCell id="e-user-pool-label" value="OAuth 2.0 + PKCE" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;" connectable="0" vertex="1" parent="e-user-pool">
+  <mxGeometry relative="1" x="-0.2" y="0" as="geometry"><mxPoint as="offset" /></mxGeometry>
+</mxCell>
+<mxCell id="e-pool-auth" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;dashed=1;strokeColor=#666666;exitX=1;exitY=0.5;entryX=0;entryY=0.75;" edge="1" parent="1" source="pool" target="authorizer">
+  <mxGeometry relative="1" as="geometry" />
+</mxCell>
+<mxCell id="e-pool-auth-label" value="token issuer" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;" connectable="0" vertex="1" parent="e-pool-auth">
+  <mxGeometry relative="1" x="-0.2" y="0" as="geometry"><mxPoint as="offset" /></mxGeometry>
+</mxCell>
+<mxCell id="step-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=16;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;align=center;verticalAlign=middle;" value="1" vertex="1" parent="1">
+  <mxGeometry x="210" y="200" width="28" height="28" as="geometry" />
+</mxCell>
+<mxCell id="step-2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=16;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;align=center;verticalAlign=middle;" value="2" vertex="1" parent="1">
+  <mxGeometry x="500" y="190" width="28" height="28" as="geometry" />
+</mxCell>
+<mxCell id="step-3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=16;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;align=center;verticalAlign=middle;" value="3" vertex="1" parent="1">
+  <mxGeometry x="210" y="470" width="28" height="28" as="geometry" />
+</mxCell>
+<mxCell id="step-4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=16;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;align=center;verticalAlign=middle;" value="4" vertex="1" parent="1">
+  <mxGeometry x="490" y="400" width="28" height="28" as="geometry" />
+</mxCell>
+<mxCell id="step-5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=16;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;align=center;verticalAlign=middle;" value="5" vertex="1" parent="1">
+  <mxGeometry x="820" y="530" width="28" height="28" as="geometry" />
+</mxCell>
+<mxCell id="step-6" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=16;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;align=center;verticalAlign=middle;" value="6" vertex="1" parent="1">
+  <mxGeometry x="1120" y="530" width="28" height="28" as="geometry" />
+</mxCell>
+<mxCell id="step-7" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=16;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;align=center;verticalAlign=middle;" value="7" vertex="1" parent="1">
+  <mxGeometry x="1420" y="530" width="28" height="28" as="geometry" />
+</mxCell>
+<mxCell id="legend-bg" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.rect;fillColor2=none;strokeWidth=1;size=20;indent=5;fillColor=light-dark(#EDF3FF,#305363);strokeColor=#6c8ebf;" value="" vertex="1" parent="1">
+  <mxGeometry height="700" width="520" x="1820" y="140" as="geometry" />
+</mxCell>
+<mxCell id="legend-container" connectable="0" style="group" value="" vertex="1" parent="1">
+  <mxGeometry height="660" width="480" x="1840" y="160" as="geometry" />
+</mxCell>
+<mxCell id="step-1-legend" connectable="0" style="group;fontFamily=Helvetica;" value="" vertex="1" parent="legend-container">
+  <mxGeometry height="70" width="600" x="0" y="0" as="geometry" />
+</mxCell>
+<mxCell id="step-1-badge-legend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=22;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;" value="1" vertex="1" parent="step-1-legend">
+  <mxGeometry height="38" width="40" y="2" as="geometry" />
+</mxCell>
+<mxCell id="step-1-desc-legend" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;fontFamily=Helvetica;whiteSpace=wrap;" value="&lt;div&gt;&lt;b&gt;Open the application&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(0,0,0), rgb(255,255,255));&quot;&gt;The browser calls GET / over HTTPS.&lt;/span&gt;&lt;/div&gt;" vertex="1" parent="step-1-legend">
+  <mxGeometry height="64" width="540" x="52" as="geometry" />
+</mxCell>
+<mxCell id="step-2-legend" connectable="0" style="group;fontFamily=Helvetica;" value="" vertex="1" parent="legend-container">
+  <mxGeometry height="70" width="600" x="0" y="80" as="geometry" />
+</mxCell>
+<mxCell id="step-2-badge-legend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=22;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;" value="2" vertex="1" parent="step-2-legend">
+  <mxGeometry height="38" width="40" y="2" as="geometry" />
+</mxCell>
+<mxCell id="step-2-desc-legend" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;fontFamily=Helvetica;whiteSpace=wrap;" value="&lt;div&gt;&lt;b&gt;Load the UI&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(0,0,0), rgb(255,255,255));&quot;&gt;API Gateway invokes the UI Lambda and returns the page.&lt;/span&gt;&lt;/div&gt;" vertex="1" parent="step-2-legend">
+  <mxGeometry height="64" width="540" x="52" as="geometry" />
+</mxCell>
+<mxCell id="step-3-legend" connectable="0" style="group;fontFamily=Helvetica;" value="" vertex="1" parent="legend-container">
+  <mxGeometry height="70" width="600" x="0" y="160" as="geometry" />
+</mxCell>
+<mxCell id="step-3-badge-legend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=22;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;" value="3" vertex="1" parent="step-3-legend">
+  <mxGeometry height="38" width="40" y="2" as="geometry" />
+</mxCell>
+<mxCell id="step-3-desc-legend" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;fontFamily=Helvetica;whiteSpace=wrap;" value="&lt;div&gt;&lt;b&gt;Sign in&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(0,0,0), rgb(255,255,255));&quot;&gt;Cognito managed login uses the authorization code grant and PKCE.&lt;/span&gt;&lt;/div&gt;" vertex="1" parent="step-3-legend">
+  <mxGeometry height="64" width="540" x="52" as="geometry" />
+</mxCell>
+<mxCell id="step-4-legend" connectable="0" style="group;fontFamily=Helvetica;" value="" vertex="1" parent="legend-container">
+  <mxGeometry height="70" width="600" x="0" y="240" as="geometry" />
+</mxCell>
+<mxCell id="step-4-badge-legend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=22;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;" value="4" vertex="1" parent="step-4-legend">
+  <mxGeometry height="38" width="40" y="2" as="geometry" />
+</mxCell>
+<mxCell id="step-4-desc-legend" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;fontFamily=Helvetica;whiteSpace=wrap;" value="&lt;div&gt;&lt;b&gt;Search&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(0,0,0), rgb(255,255,255));&quot;&gt;The browser sends the Cognito ID token to GET /employee/{id}.&lt;/span&gt;&lt;/div&gt;" vertex="1" parent="step-4-legend">
+  <mxGeometry height="64" width="540" x="52" as="geometry" />
+</mxCell>
+<mxCell id="step-5-legend" connectable="0" style="group;fontFamily=Helvetica;" value="" vertex="1" parent="legend-container">
+  <mxGeometry height="70" width="600" x="0" y="320" as="geometry" />
+</mxCell>
+<mxCell id="step-5-badge-legend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=22;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;" value="5" vertex="1" parent="step-5-legend">
+  <mxGeometry height="38" width="40" y="2" as="geometry" />
+</mxCell>
+<mxCell id="step-5-desc-legend" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;fontFamily=Helvetica;whiteSpace=wrap;" value="&lt;div&gt;&lt;b&gt;Authorize&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(0,0,0), rgb(255,255,255));&quot;&gt;The Cognito authorizer accepts a valid ID token.&lt;/span&gt;&lt;/div&gt;" vertex="1" parent="step-5-legend">
+  <mxGeometry height="64" width="540" x="52" as="geometry" />
+</mxCell>
+<mxCell id="step-6-legend" connectable="0" style="group;fontFamily=Helvetica;" value="" vertex="1" parent="legend-container">
+  <mxGeometry height="70" width="600" x="0" y="400" as="geometry" />
+</mxCell>
+<mxCell id="step-6-badge-legend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=22;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;" value="6" vertex="1" parent="step-6-legend">
+  <mxGeometry height="38" width="40" y="2" as="geometry" />
+</mxCell>
+<mxCell id="step-6-desc-legend" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;fontFamily=Helvetica;whiteSpace=wrap;" value="&lt;div&gt;&lt;b&gt;Invoke the backend&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(0,0,0), rgb(255,255,255));&quot;&gt;The backend Lambda runs with its IAM role.&lt;/span&gt;&lt;/div&gt;" vertex="1" parent="step-6-legend">
+  <mxGeometry height="64" width="540" x="52" as="geometry" />
+</mxCell>
+<mxCell id="step-7-legend" connectable="0" style="group;fontFamily=Helvetica;" value="" vertex="1" parent="legend-container">
+  <mxGeometry height="70" width="600" x="0" y="480" as="geometry" />
+</mxCell>
+<mxCell id="step-7-badge-legend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=22;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;" value="7" vertex="1" parent="step-7-legend">
+  <mxGeometry height="38" width="40" y="2" as="geometry" />
+</mxCell>
+<mxCell id="step-7-desc-legend" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;fontFamily=Helvetica;whiteSpace=wrap;" value="&lt;div&gt;&lt;b&gt;Read the employee&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(0,0,0), rgb(255,255,255));&quot;&gt;The role allows dynamodb:GetItem on the Employees table.&lt;/span&gt;&lt;/div&gt;" vertex="1" parent="step-7-legend">
+  <mxGeometry height="64" width="540" x="52" as="geometry" />
+</mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
